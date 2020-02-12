@@ -8,16 +8,16 @@ popd > /dev/null
 
 UNAME_STR=`uname`
 
-if [ ! -d $DIR/yosys ]; then
+if [ ! -d "$DIR"/yosys ]; then
 	echo "Checking out yosys..."
-	git clone https://github.com/cliffordwolf/yosys.git $DIR/yosys
+	git clone https://github.com/cliffordwolf/yosys.git "$DIR"/yosys
 else
-	cd $DIR/yosys
+	cd "$DIR"/yosys
 	echo "Updating yosys..."
 	git pull origin master || exit 1
 fi
 
-cd $DIR/yosys
+cd "$DIR"/yosys
 
 if [[ "$UNAME_STR" == "Darwin" ]]; then
 	OLDPATH=$PATH

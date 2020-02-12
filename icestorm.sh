@@ -7,17 +7,17 @@ popd > /dev/null
 PYTHONVERSION=$(python3 --version 2>&1 | egrep -o '3\.[0-9]+')
 UNAME_STR=`uname`
 
-if [ ! -d $DIR/icestorm ]; then
+if [ ! -d "$DIR"/icestorm ]; then
 	echo "Checking out icestorm..."
-	git clone https://github.com/cliffordwolf/icestorm.git $DIR/icestorm
-	cd $DIR/icestorm/
+	git clone https://github.com/cliffordwolf/icestorm.git "$DIR"/icestorm
+	cd "$DIR"/icestorm/
 else
-	cd $DIR/icestorm
+	cd "$DIR"/icestorm
 	echo "Updating icestorm..."
 	git pull origin master || exit 1
 fi
 
-cd $DIR/icestorm
+cd "$DIR"/icestorm
 
 echo "Building icestorm..."
 if [[ "$UNAME_STR" == "Darwin" ]] && hash brew 2>/dev/null; then

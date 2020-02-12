@@ -18,24 +18,24 @@ fi
 echo "┌──────────┐"
 echo "│ icestorm │"
 echo "└──────────┘"
-$DIR/icestorm.sh
+"$DIR"/icestorm.sh
 
 echo "┌─────────────┐"
 echo "│ arachne-pnr │"
 echo "└─────────────┘"
-$DIR/arachne-pnr.sh
+"$DIR"/arachne-pnr.sh
 
 echo "┌───────┐"
 echo "│ yosys │"
 echo "└───────┘"
-$DIR/yosys.sh
+"$DIR"/yosys.sh
 
 echo "┌──────────┐"
 echo "│ iverilog │"
 echo "└──────────┘"
-$DIR/iverilog.sh
+"$DIR"/iverilog.sh
 
 echo "┌───────────┐"
 echo "│ verilator │"
 echo "└───────────┘"
-$DIR/verilator.sh
+"$DIR"/verilator.sh

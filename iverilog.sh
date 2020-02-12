@@ -6,16 +6,16 @@ popd > /dev/null
 
 UNAME_STR=`uname`
 
-if [ ! -d $DIR/iverilog ]; then
+if [ ! -d "$DIR"/iverilog ]; then
 	echo "Checking out iverilog..."
-	git clone git://github.com/steveicarus/iverilog.git $DIR/iverilog
+	git clone git://github.com/steveicarus/iverilog.git "$DIR"/iverilog
 else
-	cd $DIR/iverilog
+	cd "$DIR"/iverilog
 	echo "Updating iverilog..."
 	git pull origin master || exit 1
 fi
 
-cd $DIR/iverilog
+cd "$DIR"/iverilog
 
 echo "Building iverilog..."
 autoconf

@@ -6,16 +6,16 @@ popd > /dev/null
 
 UNAME_STR=`uname`
 
-if [ ! -d $DIR/arachne-pnr ]; then
+if [ ! -d "$DIR"/arachne-pnr ]; then
 	echo "Checking out arachne-pnr..."
-	git clone https://github.com/cseed/arachne-pnr.git $DIR/arachne-pnr
+	git clone https://github.com/cseed/arachne-pnr.git "$DIR"/arachne-pnr
 else
-	cd $DIR/arachne-pnr
+	cd "$DIR"/arachne-pnr
 	echo "Updating arachne-pnr..."
 	git pull origin master || exit 1
 fi
 
-cd $DIR/arachne-pnr
+cd "$DIR"/arachne-pnr
 
 echo "Building arachne-pnr..."
 make clean

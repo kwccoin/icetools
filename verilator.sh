@@ -10,16 +10,16 @@ VERILATOR_VERSION="3.910"
 ARCHIVE="verilator-$VERILATOR_VERSION.tgz"
 DOWNLOAD_URL="https://www.veripool.org/ftp/$ARCHIVE"
 
-if [ ! -d $DIR/verilator ]; then
+if [ ! -d "$DIR"/verilator ]; then
   echo "Checking out verilator..."
-  git clone git://github.com/ddm/verilator.git $DIR/verilator
+  git clone git://github.com/ddm/verilator.git "$DIR"/verilator
 else
-  cd $DIR/verilator
+  cd "$DIR"/verilator
   echo "Updating verilator..."
   git pull origin master || exit 1
 fi
 
-cd $DIR/verilator
+cd "$DIR"/verilator
 
 echo "Building verilator..."
 autoconf
